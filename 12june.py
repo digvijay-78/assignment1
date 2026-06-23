@@ -83,29 +83,28 @@ print(10,20,sep="\n")
 
 '''9. Three Inputs Display
 Take three values from user and print each on new line.'''
-'''
+
 n1= int(input("values"))
 n2= int(input("values"))
 n3= int(input("values"))
 print(n1)
 print(n2)
-print(n3)'''
+print(n3)
 
 '''10. Input and Echo
 Take input from user and print:
 You entered: <input>'''
-#j=input("Enter ")
-#print("You entered:<{}>".format(j))
-
+j=input("Enter ")
+print("You entered:<{}>".format(j))
 '''
 11. Greeting Message
 Take name as input and print:
 Hello <name>
 Welcome to Python'''
-'''
+
 name=input("Enter The Name:")
 print("Hello:<{}>\nWelcome to Python".format(name))
-'''
+
 '''
 12. Favorite Things
 Take input:
@@ -113,11 +112,11 @@ Take input:
 - Favorite color
 Display:
 I like <food> and my favorite color is <color>'''
-'''
+
 food=input("Enter The Favorite food:")
 color=input("Enter The Favorite color:")
 print("I like <{}> and my favorite color is <{}>".format(food,color))
-'''
+
 '''
 13. College Details
 Take input:
@@ -125,13 +124,14 @@ Take input:
 - Course
 - Year
 Display in proper format.'''
+
 clg_name=input("Enter the name of College:")
 clg_course =input("Enter the name of Course:")
 clg_year=int(input("Enter the year:"))
 
 print("The college name is :{}\ncourse is:{}\nin year:{}".format(clg_name,clg_course,clg_year))
-'''
-14. Email Display
+
+'''14. Email Display
 Take email as input and print:
 Your email is: <email>'''
 email=input("Enter your email:")
