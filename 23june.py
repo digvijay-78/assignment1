@@ -356,6 +356,7 @@ else:
 		print("total fare:500")
 
 
+
 12. Restaurant Bill with GST System
 
 A restaurant applies GST based on the total bill amount:
@@ -371,17 +372,16 @@ Input:
 Enter bill amount: 4000
 
 Output:
-Final Bill Amount: ₹4680
-bill=int(input("enter the bill"))
+Final Bill Amount: ₹4680'''
+bill=int(input("enter the bill")
 if bill<=1000:
-	a=bill+(bill*(5/100))
-elif bill<=5000 and bill >=3000:
-	a=bill+(bill*(12/100))+200
-elif bill<=5000 and bill<=3000:
-	a=bill+(bill*(12/100))
-else:
-	a=bill+(bill*(18/100))+200
-print(a)
+	a=bill + (bill*5/100)
+elif bill<=5000 and bill>=3000:
+	a=(bill-1000-*5/100)+(bill-1000)*12/100)+200
+elif bill<=5000 and 
+
+'''
+
 13. Employee Performance Appraisal System
 
 
@@ -403,25 +403,6 @@ Enter rating: 4
 Output:
 Revised Salary: ₹23600
 
-sal=int(input("enter the bill"))
-re=int(input("enter the rating"))
-if re==1:
-	a=sal
-elif re==2:
-	a=sal+(sal*(5/100))
-elif re==3:
-	a=sal+(sal*(10/100))
-elif re>=4 and sal>=20000:
-	a=sal+(sal*(20/100))
-elif re==4 and sal<=20000:
-	a=sal+(sal*(20/100))+2000	
-
-else:
-	a=sal+(sal*(25/100))+2000
-print(a)
-
-
-
 14. Online Course Fee System
 
 An online platform offers courses with fixed fees:
@@ -441,42 +422,7 @@ Enter course category: Programming
 Enter user type: Student
 
 Output:
-Final Course Fee: ₹4000'''
-'''
-cou=input("Enter course category: ")
-user=input("Enter user type: ")
-a=1
-if cou.lower()=="Programming" and user.lower()=="student":
-    a=5000-(5000*20/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="Programming" and user.lower()=="Working Professional":
-    a=5000-(5000*10/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="Programming" and user.lower()=="others":
-    a="no discount"
-    print("Final Course Fee:",a)
-elif cou.lower()=="design" and user.lower()=="Working Professional":
-    a=5000-(4000*10/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="design" and user.lower()=="student":
-    a=5000-(4000*20/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="design" and user.lower()=="others":
-    a="no discount"
-    print("Final Course Fee:",a)
-elif cou.lower()=="marketing" and user.lower()=="Working Professional":
-    a=5000-(3000*10/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="marketing" and user.lower()=="student":
-    a=5000-(3000*20/100)
-    print("Final Course Fee:",a)
-elif cou.lower()=="marketing" and user.lower()=="others":
-    a="no discount"
-    print("Final Course Fee:",a)
-else:
-    "not avaliable"
-    print("Final Course Fee:",a)'''
-'''
+Final Course Fee: ₹4000
 
 15. Smart Parking System
 
@@ -495,26 +441,3 @@ Enter hours parked: 6
 
 Output:
 Total Parking Fee: ₹220'''
-
-a=input("enter the vehicle:")
-b=int(input("enter the hr parked:"))
-if a.lower()=="bike" and b<=5:
-    c=b*10
-    print(c)
-elif a.lower()=="bike" and b>=5:
-        c=b*10+100
-        print(c)
-elif a.lower()=="car" and b>=5:
-    c=b*20+100
-    print(c)
-elif a.lower()=="car" and b<=5:
-    c=b*20
-    print(c)
-elif a.lower()=="bus" and b>=5:
-    c=b*50+100
-    print(c)
-elif a.lower()=="bus" and b<=5:
-		d=b*50
-		print(d)
-else:
-	print('error')
