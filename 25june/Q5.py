@@ -8,14 +8,10 @@ Input:
 Output:
 Factors Count = 6'''
 n=int(input("="))
-count=1
-'''
-for i in range(1,n//2+1):
-	if n%i==0:
-		count+=1
-print(count)'''
-i=1
-while  i<=(n//2):
+count=0
+for i in range(1,n+1):
 	if n%i==0:
 		count+=1
 print(count)
+
+while 
