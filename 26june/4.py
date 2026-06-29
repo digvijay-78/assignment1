@@ -11,10 +11,10 @@ Distance = 12
 
 Output:
 Fare Multiplier = 2x Fare'''
-
 demand=int(input("="))
 time =input("=")
 distance=int(input("="))
+
 if demand >=80:
 	if time.lower()=="peak":
 		if distance>=10:

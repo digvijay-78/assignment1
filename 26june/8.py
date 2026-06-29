@@ -1,4 +1,4 @@
-'''1. Smart Credit Card Approval System
+'''8. Smart Credit Card Approval System
 
 A bank evaluates credit card applications based on income, credit score, employment type, and existing debt.
 
