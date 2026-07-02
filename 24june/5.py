@@ -30,14 +30,3 @@ else:
 	print("error")
 
 
-
-
-
-while n>0 :
-    reverse = reverse*10 + n%10
-    n = n//10
-if reverse == m :
-    print("number is Palindrome")
-else:
-    print("Not Palindrome")
-
