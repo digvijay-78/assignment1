@@ -1,0 +1,118 @@
+i want to use random like i want to ,
+What is the square root of 196
+What is the square root of 169
+every time new questions new answer
+and i want the match case to be random too
+
+That's an even better idea! Instead of hardcoding questions, you can store questions and answers in dictionaries and let Python choose them randomly. You can also make the match-case itself random.
+
+Here's the approach.
+
+Step 1: Import random
+import random
+Step 2: Create question banks
+square = {
+    196: 14,
+    169: 13,
+    144: 12,
+    225: 15,
+    256: 16,
+    289: 17,
+    324: 18
+}
+
+cube = {
+    27: 3,
+    64: 4,
+    125: 5,
+    216: 6,
+    343: 7,
+    512: 8,
+    729: 9
+}
+
+multiply = {
+    "25 x 16": 400,
+    "18 x 12": 216,
+    "14 x 15": 210,
+    "11 x 11": 121
+}
+
+percentage = {
+    "20% of 250": 50,
+    "10% of 400": 40,
+    "25% of 200": 50,
+    "50% of 120": 60
+}
+Step 3: Randomly choose the case
+case = random.randint(1, 4)
+
+match case:
+    case 1:
+        print("Square Root Round")
+
+    case 2:
+        print("Cube Root Round")
+
+    case 3:
+        print("Multiplication Round")
+
+    case 4:
+        print("Percentage Round")
+
+Each time you run the program, it will enter a different case.
+
+Step 4: Randomly choose a question
+
+For the square root case:
+
+number = random.choice(list(square.keys()))
+
+print(f"What is the square root of {number}?")
+
+answer = int(input("Answer: "))
+
+if answer == square[number]:
+    print("✅ Correct!")
+else:
+    print("❌ Wrong!")
+    print(f"Correct answer is {square[number]}")
+    print(f"Because {square[number]} × {square[number]} = {number}")
+
+If number becomes 196, the output is:
+
+What is the square root of 196?
+
+If number becomes 289, the output is:
+
+What is the square root of 289?
+
+The question changes automatically every time.
+
+Even Better Project
+
+Instead of one question, ask 10 random questions.
+
+for i in range(10):
+    case = random.randint(1, 4)
+
+    match case:
+        case 1:
+            # Random square question
+
+        case 2:
+            # Random cube question
+
+        case 3:
+            # Random multiplication question
+
+        case 4:
+            # Random percentage question
+
+Now every question is random:
+
+The topic (square, cube, multiplication, percentage) is random.
+The question within that topic is random.
+The answer is checked automatically from the dictionary.
+
+This structure is how many real quiz games are built. As your skills grow, you can expand it to 100+ questions just by adding more entries to the dictionaries without changing the game logic.
