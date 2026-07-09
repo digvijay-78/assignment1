@@ -1,0 +1,132 @@
+        case 11:
+            year=random.randrange(1900,2101)
+            month=random.randrange(1,13)
+
+            if month==2:
+                if (year%400==0) or (year%4==0 and year%100!=0):
+                    day=random.randrange(1,30)
+                else:
+                    day=random.randrange(1,29)
+            elif month==4 or month==6 or month==9 or month==11:
+                day=random.randrange(1,31)
+            else:
+                day=random.randrange(1,32)
+
+            print(f"What will be the day on {day}/{month}/{year}?")
+            answer=input("Enter the answer: ").capitalize()
+
+            a=datetime.date(year,month,day).strftime("%A")
+
+            if answer==a:
+                print("bingo")
+                count+=1
+            else:
+                print("wrong answer")
+                print("Correct answer:",a)
+
+                print("\nSolution using Zeller's Congruence")
+
+                q=day
+                m=month
+                y=year
+
+                if m==1:
+                    m=13
+                    y=y-1
+                elif m==2:
+                    m=14
+                    y=y-1
+
+                K=y%100
+                J=y//100
+
+                h=(q+(13*(m+1))//5+K+K//4+J//4+5*J)%7
+
+                print("q =",q)
+                print("m =",m)
+                print("K =",K)
+                print("J =",J)
+
+                print("\nh = (q + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7")
+                print("h =",h)
+
+                if h==0:
+                    print("0 = Saturday")
+                elif h==1:
+                    print("1 = Sunday")
+                elif h==2:
+                    print("2 = Monday")
+                elif h==3:
+                    print("3 = Tuesday")
+                elif h==4:
+                    print("4 = Wednesday")
+                elif h==5:
+                    print("5 = Thursday")
+                else:
+                    print("6 = Friday")       
+
+ case 11:
+            year = random.randint(1900, 2100)
+            month = random.randint(1, 12)
+
+            if month == 2:
+                if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+                    day = random.randint(1, 29)
+                else:
+                    day = random.randint(1, 28)
+            elif month == 4 or month == 6 or month == 9 or month == 11:
+                day = random.randint(1, 30)
+            else:
+                day = random.randint(1, 31)
+
+            print(f"What was the day on {day}/{month}/{year}?")
+            answer = input("Enter the day: ").capitalize()
+
+            correct = datetime.date(year, month, day).strftime("%A")
+
+            if answer == correct:
+                print("Bingo!")
+                count += 1
+            else:
+                print("Wrong answer!")
+                print("Correct answer:", correct)
+
+                # Zeller's Congruence
+                q = day
+                m = month
+                y = year
+
+                if m == 1:
+                    m = 13
+                    y = y - 1
+                elif m == 2:
+                    m = 14
+                    y = y - 1
+
+                K = y % 100
+                J = y // 100
+
+                h = (q + (13 * (m + 1)) // 5 + K + K // 4 + J // 4 + 5 * J) % 7
+
+                print("\nSolution:")
+                print("q =", q)
+                print("m =", m)
+                print("K =", K)
+                print("J =", J)
+                print("h = (q + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7")
+                print("h =", h)
+
+                if h == 0:
+                    print("0 = Saturday")
+                elif h == 1:
+                    print("1 = Sunday")
+                elif h == 2:
+                    print("2 = Monday")
+                elif h == 3:
+                    print("3 = Tuesday")
+                elif h == 4:
+                    print("4 = Wednesday")
+                elif h == 5:
+                    print("5 = Thursday")
+                else:
+                    print("6 = Friday")
