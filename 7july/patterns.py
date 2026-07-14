@@ -947,3 +947,12 @@ for i in range(n,0,-1):
     
 '''   
 
+n=int(input("="))
+for i in range(n,0,-1):
+		if i%2!=0:
+			for k in range(i,0,-1):
+				print(k ,end="")
+		else:
+			for n in range(1,i+1):
+				print(n,end="")
+		print()
