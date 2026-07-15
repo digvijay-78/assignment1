@@ -17,19 +17,22 @@ n=input("enter =")
 a=n[:2]
 b=n[2:4]
 count=0
+space=0
 for i in n:
     if "A" <= a <= "Z" or  "a" <= a <= "z":
         count=0
         if "0" <= b <= "9":
             count=0
-            if i==" ":
-                count=1
         else:
-            count=1
+            count =1
+        if i==" ":
+            space+=1
+        else:
+            count=0
             
     else:
         count=1
-if len(n)>=10 and count==0:
+if (len(n)-space)==10 and count==0:
     print("Valid Vehicle Number")
 else:
     print("not Valid Vehicle Number")

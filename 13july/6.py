@@ -32,3 +32,18 @@ if count==0 and len(n)>=12:
      print("valid")
 else:
      print("not valid")
+
+
+
+n = input("Enter vehicle number :")
+l = len(n)
+if len(n) == 10 and n[0] >= 'A' and n[0]<='Z' and n[1] >= 'A' and n[1]<='Z':
+    if n[2] >= '0' and n[2] <= '9' and n[3] >= '0' and n[3] <= '9' :
+        if n[l-1] >= '0' and n[l-1] <= '9' :
+            print("Valid vehicle number")
+        else :
+            print("Invalid") 
+    else :           
+        print("Invalid")
+else :
+    print("Invalid")

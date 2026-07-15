@@ -666,3 +666,17 @@ for i in range(n-1,0,-1):
          else:
             print("_",end="")
 '''
+
+
+
+n = int(input("Enter n: "))
+
+for i in range(1, n + 1):
+    print()
+    for k in range(n, i, -1):
+        print(" ", end="")
+    for j in range(1, 2 * i):
+        if j == i:
+            print(1, end="")
+        else:
+            print("*", end="")
