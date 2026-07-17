@@ -10,8 +10,12 @@ Output:
 Total words: 5'''
 n=input("=")
 count=0
-for i in n:
-	if i==" ":
-		count+=1
-
-print(count+1)
+x=0
+for i in range(len(n)):
+	if n[i]==" ":
+		x=0
+	else:
+		if x==0:
+			count+=1
+			x=1
+print(count)
