@@ -12,12 +12,6 @@ Input: Enter account number: 123456789012
 
 Output: Masked Account: ****9012'''
 n=input("=")
-# a=n[-4:]
+c=" "
 
-# print(len(n[:-4])*"*",end="")
-# print(a,end="")
-for i in range(len(n)):
-    if i < len(n) - 4:
-        print("*", end="")
-    else:
-        print(n[i], end="")
+	

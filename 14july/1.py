@@ -15,3 +15,15 @@ Enter username: ajay_123
 Output:
 Valid Username
 '''
+n=input("=")
+a=n[0]
+count=0;s=0
+if ("a"<=a <="z") or ( "A"<=a and <="Z"):
+	count=1
+for i in n:
+	if i==" ":
+		s=1
+if 5<= len(n) <= 12 and s==0 and count==1:
+	print("valid")
+else:
+	print("unvalid")
