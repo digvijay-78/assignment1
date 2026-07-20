@@ -20,3 +20,16 @@ Output:
 
 5
 '''
+a=input("=")
+count=""
+for i in a:
+    if i not in count:
+        count+=i
+print(len(count))
+
+
+# a = input()
+# 
+# count = len(set(a))
+# 
+# print(count)
