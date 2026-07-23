@@ -288,8 +288,31 @@ for i in range(1,n+1):
             print("_",end="")
     print()
    
+Q65
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
 
 
+n = int(input("enter number : ")) 
+i = 1
+while i<=n:
+    j = n-i
+    while j>=1:
+        print(" ",end="")
+        j-=1
+
+    k = 1
+    while k<=i:
+        if  k==1 or k==i:
+            print("1",end=" ")
+        else :
+            print(i-1,end=" ")    
+        k+=1   
+    print()
+    i+=1
 
 
 
@@ -458,7 +481,7 @@ for i in range(n,0,-1):
 
 
 
-
+Q74
     
 123456789
  1_____7
@@ -479,7 +502,7 @@ for i in range(n,0,-1):
 
 
 
-
+Q75
 123456789
  1+++++7
   1+++5
@@ -501,7 +524,7 @@ for i in range(n,0,-1):
             
             
             
-            
+Q76           
 x
 xx   
 xxx
@@ -524,7 +547,7 @@ for k in range(n,1,-1):
 	   print("x",end="")
 
 
-Q
+Q77
 1
 12
 123
@@ -550,7 +573,7 @@ for k in range(n,1,-1):
 
 
 
-Q
+Q78
    1
   12
  123
@@ -580,7 +603,7 @@ for i in range(n,1,-1):
 	
 	
 	
-	
+Q79	
 1 
 1 2 
 1   3 
@@ -608,10 +631,55 @@ for i in range(n-1,0,-1):
 
 
 
+Q80
+    *
+   *_*
+  *_*_*
+ *_*_*_*
+*_*_*_*_*
+ *_*_*_*
+  *_*_*
+   *_*
+    *
+
+n = int(input("enter value : "))
+
+i = 1
+while i<=n :
+    j = 1 
+    while j<=n-i :
+        print(" ",end="")
+        j+=1
+
+    k = 1
+    while k<=2*i-1 :
+        if k%2 != 0:
+            print("*",end="")
+        else :
+            print("_",end="") 
+        k+=1           
+    print()
+    i+=1    
+
+i = 1
+while i<n :
+    j = 1 
+    while j<=i :
+        print(" ",end="")
+        j+=1
+
+    k = 1
+    while k<=2*(n-i) - 1 :
+        if k%2 != 0:
+            print("*",end="")
+        else :
+            print("_",end="") 
+        k+=1           
+    print()
+    i+=1  
 
 
-
-			        
+Q81		        
    *
   ***
  *****
@@ -636,7 +704,7 @@ for i in range(n-1,0,-1):
     
 
 
-
+Q82
   *
   *_*
  *___*
@@ -665,18 +733,400 @@ for i in range(n-1,0,-1):
                  print("*" ,end="")
          else:
             print("_",end="")
-'''
 
 
 
-n = int(input("Enter n: "))
+Q83
 
-for i in range(1, n + 1):
+match box wala 
+
+
+
+n = int(input("enter value : "))
+
+i = 0
+while i<n :
+    j = 1 
+    while j<=i :
+        if j == 1  :
+            print("|",end="")
+        else :    
+            print(" ",end="")
+        j+=1
+    k = 2*n-(2*i+1)
+    while k>=1 :
+        if k == 1 :
+            print("/",end="")
+        elif k ==2*n-(2*i+1):
+            print("\\",end="") 
+        elif i==0:
+            print("-",end="")     
+        else :
+            print(" ",end="")
+        k-=1  
+    l = i
+    while l>0:
+        if l==1 :
+            print("|",end="")
+        else :
+            print(" ",end="")         
+        l-=1      
+    print()    
+    i+=1
+
+i = n-1
+while i>=1 :
+    j = 1 
+    while j<= i-1 :
+        if j==1 :
+            print("|",end="")
+        else :    
+            print(" ",end="")
+        j+=1
+    k = 1
+    while k<= 2*n-(2*i-1) :
+        if k == 1   :
+            print("/",end="")
+        elif k==2*n-(2*i-1):
+            print("\\",end="")     
+        elif i==1:  
+            print("-",end="")  
+        else :
+            print(" ",end="")
+        k+=1  
+    l = i-1
+    while l>0:
+        if l==1 :
+            print("|",end="")
+        else :
+            print(" ",end="")         
+        l-=1                
+
     print()
-    for k in range(n, i, -1):
-        print(" ", end="")
-    for j in range(1, 2 * i):
-        if j == i:
-            print(1, end="")
+    i-=1
+Q84
+    1
+   212
+  32123
+ 4321234
+543212345 
+
+n = int(input("enter value : "))
+
+i = 1
+while i<=n :
+    j = 1 
+    while j<=n-i :
+        print(" ",end="")
+        j+=1
+
+    k = i 
+    while k>=1 :
+        print(k,end="")
+        k-=1 
+
+    l = 2
+    while l<=i:
+        print(l,end="")
+        l+=1       
+    print()
+    i+=1    
+
+Q85
+*         *
+**       **
+***     ***
+****   ****
+***** *****
+
+n = int(input("enter number : ")) 
+i = 1
+while i<=n:
+    j = 1
+    while j<=i:
+        print("*",end="")
+        j+=1
+
+    k = (2*n + 1) - 2*i
+    while k>=1  :
+        print(" ",end="")
+        k-=1 
+
+    l = i
+    while l>=1:
+        print("*",end="")
+        l-=1    
+    print()
+    i+=1 
+
+    
+Q86
+***** *****
+****   ****
+***     ***
+**       **
+*         *
+
+n = int(input("enter a number : " ))
+
+i = n 
+while i>=1 :
+    j=1 
+    while j<=i:
+        print("*",end="")
+        j+=1
+    k = 1
+    while k<=(2*n + 1) - 2*i  :
+        print(" ",end="")
+        k+=1
+    l = i 
+    while l>=1:
+        print("*",end="")
+        l-=1             
+    print()
+    i-=1    
+
+
+
+Q87   
+***** *****
+****   ****
+***     ***
+**       **
+*         *
+*         *
+**       **
+***     ***
+****   ****
+***** *****  
+    
+
+
+n = int(input("enter number : "))
+i = n 
+while i>=1 :
+    j=1 
+    while j<=i:
+        print("*",end="")
+        j+=1
+    k = 1
+    while k<=(2*n + 1) - 2*i  :
+        print(" ",end="")
+        k+=1
+    l = i 
+    while l>=1:
+        print("*",end="")
+        l-=1             
+    print()
+    i-=1    
+ 
+i = 1
+while i<=n:
+    j = 1
+    while j<=i:
+        print("*",end="")
+        j+=1
+
+    k = (2*n + 1) - 2*i
+    while k>=1  :
+        print(" ",end="")
+        k-=1 
+
+    l = i
+    while l>=1:
+        print("*",end="")
+        l-=1    
+    print()
+    i+=1 
+
+    
+    
+    
+Q88 
+
+    1    
+    2    
+    3    
+    4    
+123454321
+    5
+    4
+    3
+    2
+    1
+
+n = int(input("enter number : "))
+i = 1 
+while i<=n:
+    j=1 
+    while j<=n:
+        if j==n:
+            print(i,end="")
+        elif i==n:
+            print(j,end="")    
+        else :
+            print(" ",end="")    
+        j+=1
+
+    k = n-1
+    while k>=1:
+        if i==n:
+            print(k,end="")   
+        else :
+            print(" ",end="") 
+        k-=1                 
+    print()
+    i+=1 
+
+i = n
+while i>=1:
+    j = 1 
+    while j<=n:
+        if j == n :
+            print(i,end="")
+        else :
+            print(" ",end="")
+        j+=1
+    print()
+    i-=1            
+
+    
+Q89
+1               
+    101            
+   10101         
+  1010101           
+ 101010101 
+10101010101
+
+
+n = int(input("enter value : "))
+
+i = 1
+while i<=n :
+    j = 1 
+    while j<=n-i :
+        print(" ",end="")
+        j+=1
+    k= 1
+    while k < 2*i :
+        if k%2 == 0:
+            print(0,end="")
         else:
-            print("*", end="")
+            print(1,end="")
+        k+=1        
+
+    print()
+    i+=1    
+
+    
+
+Q90
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+n = int(input("enter value : "))
+
+i = 0
+while i<n :
+    j = 1 
+    while j<=i :
+        print(" ",end="")
+        j+=1
+    k = 2*n-(2*i+1)
+    while k>=1 :
+        if k == 1 or k== 2*n-(2*i+1) :
+            print("*",end="")
+        else :
+            print(" ",end="")
+        k-=1    
+    print()    
+    i+=1
+
+i = n-1
+while i>=1 :
+    j = 1 
+    while j<= i-1 :
+        print(" ",end="")
+        j+=1
+    k = 1
+    while k<= 2*n-(2*i-1) :
+        if k == 1 or k== 2*n-(2*i-1) :
+            print("*",end="")
+        else :
+            print(" ",end="")
+        k+=1     
+
+    print()
+    i-=1    
+
+'''
+n = int(input("enter value : "))
+
+i = 0
+while i<n :
+    j = 1 
+    while j<=i :
+        if j == 1  :
+            print("|",end="")
+        else :    
+            print(" ",end="")
+        j+=1
+    k = 2*n-(2*i+1)
+    while k>=1 :
+        if k == 1 :
+            print("/",end="")
+        elif k ==2*n-(2*i+1):
+            print("\\",end="") 
+        elif i==0:
+            print("-",end="")     
+        else :
+            print(" ",end="")
+        k-=1  
+    l = i
+    while l>0:
+        if l==1 :
+            print("|",end="")
+        else :
+            print(" ",end="")         
+        l-=1      
+    print()    
+    i+=1
+
+i = n-1
+while i>=1 :
+    j = 1 
+    while j<= i-1 :
+        if j==1 :
+            print("|",end="")
+        else :    
+            print(" ",end="")
+        j+=1
+    k = 1
+    while k<= 2*n-(2*i-1) :
+        if k == 1   :
+            print("/",end="")
+        elif k==2*n-(2*i-1):
+            print("\\",end="")     
+        elif i==1:  
+            print("-",end="")  
+        else :
+            print(" ",end="")
+        k+=1  
+    l = i-1
+    while l>0:
+        if l==1 :
+            print("|",end="")
+        else :
+            print(" ",end="")         
+        l-=1                
+
+    print()
+    i-=1
