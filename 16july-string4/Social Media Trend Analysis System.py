@@ -31,4 +31,22 @@ If no second highest frequency exists, print:
 Second highest repeating character not found'''
 
 n=input("=")
+high=mid=0
+ch1=ch2=""
 
+for i in range(len(n)):
+    count=n.count(n[i])
+
+    if count > high:
+        mid = high
+        ch2 = ch1
+        high = count
+        ch1 = i
+    elif count > mid and count != high:
+        mid = count
+        ch2 = n[i]
+
+if ch2 == "":
+    print("Second highest repeating character not found")
+else:
+    print(ch2)
