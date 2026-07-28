@@ -37,12 +37,15 @@ ch1=ch2=""
 for i in range(len(n)):
     count=n.count(n[i])
 
+    if n[i]==ch1 or n[i]==ch2:
+        continue
+
     if count > high:
         mid = high
         ch2 = ch1
         high = count
-        ch1 = i
-    elif count > mid and count != high:
+        ch1 = n[i]
+    elif count > mid and count < high:
         mid = count
         ch2 = n[i]
 
