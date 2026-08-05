@@ -38,18 +38,18 @@
 # print(c)
 
 #largest and smallest
-# a=[1,2,3,4,5,6]
-# print(max(a))
-# print(min(a))
-# l=a[0]
-# s=a[0]
-# for i in a:
-    # if i>l:
-        # l=i
-    # if i<s:
-        # s=i
-# print(l)
-# print(s)
+a=[1,2,3,4,5,6]
+print(max(a))
+print(min(a))
+l=a[0]
+s=a[0]
+for i in a:
+   if i>l:
+       l=i
+   if i<s:
+      # s=i
+print(l)
+print(s)
 
 #merge list without duplicates
 # a=[1,2,3,4,5,6]
