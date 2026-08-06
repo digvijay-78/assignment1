@@ -46,9 +46,12 @@ for i in arr:
     for j in range(1,i+1):
         fact=fact*j
     factl.append(fact)
+    #if fact%2==0:#if the values are greater than 2 
+    #    count+=1
 for i in factl:
-    if i%2==0:
-        count+=1
+    if i % 2 == 0:
+        count += 1
 print(sum(factl))
 print(max(factl))
 print(count)
+#print(len(factl))
