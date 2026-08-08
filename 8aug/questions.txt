@@ -1,0 +1,147 @@
+NOTE: In all programs, read the length and list elements from the user.
+
+====================================================================
+
+1. First Non-Repeating Number
+   ====================================================================
+
+Scenario
+
+An online voting system stores vote IDs in a list.
+
+Find the first vote ID that appears only once.
+
+Requirements
+
+* Read N and list elements from user
+* Find the first non-repeating number
+* If no such number exists, display an appropriate message
+
+Test Case 1
+
+Input:
+[4, 5, 1, 2, 1, 2, 4]
+
+Output:
+First Non-Repeating Number = 5
+
+Test Case 2
+
+Input:
+[7, 7, 8, 8]
+
+Output:
+No Non-Repeating Number Found
+
+---
+
+
+
+2. First Repeating Number
+=========================
+
+Scenario
+
+A security system logs employee IDs.
+
+Find the first ID that repeats in the list.
+
+Requirements
+
+* Read N and list elements from user
+* Find the first repeating number
+* If no repeating number exists, display an appropriate message
+
+Test Case 1
+
+Input:
+[10, 5, 3, 4, 3, 5]
+
+Output:
+First Repeating Number = 3
+
+Test Case 2
+
+Input:
+[1, 2, 3, 4]
+
+Output:
+No Repeating Number Found
+
+
+
+
+
+3. Missing Number Detector
+==========================
+
+Scenario
+
+Numbers from 1 to N should exist in a sequence, but one number is missing.
+
+Requirements
+
+* Read N and list elements from user
+* Find the missing number
+* Assume numbers belong to the range 1 to N+1
+
+Test Case 1
+
+Input:
+[1, 2, 3, 5]
+
+Output:
+Missing Number = 4
+
+Test Case 2
+
+Input:
+[2, 3, 4, 5]
+
+Output:
+Missing Number = 1
+
+Test Case 3
+
+Input:
+[1, 2, 4, 5]
+
+Output:
+Missing Number = 3
+
+
+
+
+
+
+4. Longest Consecutive Sequence
+===============================
+
+Scenario
+
+Find the longest sequence of consecutive numbers present in the list.
+
+Requirements
+
+* Read N and list elements from user
+* Find the length of the longest consecutive sequence
+* Display the sequence length
+
+Test Case 1
+
+Input:
+[100, 4, 200, 1, 3, 2]
+
+Output:
+Longest Consecutive Length = 4
+
+Explanation:
+Sequence = 1, 2, 3, 4
+
+Test Case 2
+
+Input:
+[10, 11, 12, 20]
+
+Output:
+Longest Consecutive Length = 3
