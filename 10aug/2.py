@@ -168,7 +168,29 @@ while True:
                   if prime==1:
                      c+=1
                print("Row", i + 1, "Prime Count =", c)         
-
+      case 2:
+         print("Count Prime Numbers Row-wise")
+         rows = int(input("enter the row size"))
+         col = int(input("enter the column size"))
+         print("enter elements for first matrix")
+         arr= []
+         for i in range(rows):
+             row = []
+             for j in range(col):
+                 row.append(int(input()))
+             arr.append(row)
+         for i in range(col):
+            count=0
+            for j in range(rows):
+               n=arr[j][i]
+               if n>1:
+                  sum=0
+                  for k in range(1,(n//2)+1):
+                     if n % k == 0:
+                        sum += k
+                  if sum == n:
+                        count += 1
+            print(f"Column {i+1} Perfect Number Count = {count}")
       case 3:
          print("Display Row-wise Sum")
          rows = int(input("enter the row size"))
