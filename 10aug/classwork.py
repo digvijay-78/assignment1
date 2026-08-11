@@ -47,7 +47,7 @@ for i in range(len(a)):
     c.append(row)
 print("display")
 print(*c)
-'''
+
 
 
 #WAP to multiply 2 matrix
@@ -86,3 +86,50 @@ else:
     # for rows in result:
     #     print(*rows)
     print(*result)
+
+
+
+
+
+
+
+
+'''
+while True :
+ print()
+ print('1. Add Two Matrices')
+ print('2. Subtract two matrices')
+ print('3. compare two matrices')
+ print('4.exit')
+ choice= int(input('enter your choice :'))
+
+
+ match choice :
+         case 1:
+              r1= int(input('enter size of rows :'))
+              c1= int(input('enter size of columns :'))
+              a=[]
+              for i in range(r1):
+                       row=[]
+                       for j in range(c1):
+                              row.append(int(input('enter elements')))
+                       a.append(row)
+              
+              r2= int(input('enter size of rows :'))
+              c2= int(input('enter size of columns :'))
+              b=[]
+              for i in range(r2):
+                       row=[]
+                       for j in range(c2):
+                              row.append(int(input('enter elements')))
+                       b.append(row)
+              result=[]
+              for m in range(r1):
+                        row=[]
+                        for n in range(c1):
+                                row.append(a[m][n]+b[m][n])
+                        result.append(row)
+              for new in result :
+                 print()
+                 for value in new :
+                   print(value, end=' ')
