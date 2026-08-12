@@ -18,21 +18,20 @@ Explanation
 ("abc","fg")
 ("de","fg")
 '''
-#a=int(input("N="))
-#pas=[]
-#print("enter array elements:")
-#for i in range(a):
-#    pas.append(input())
-#print()
-pas=["abc","de","fg","ad"]
-c=0
-re=[]
-for i in range(len(pas)) :
-      s=pas[i]
-      for j in range(len(pas)):
-           re.append(s+pas[j])
-for i in re:
-     if re.count(i)==1:
-          c+=1
-print(c)
-        
+n = int(input("Enter size of list:"))
+
+password = []
+for i in range(n):
+    password.append(input("Enter Elements:"))
+count = 0
+
+for i in range(n-1):
+    word = password[i]
+    for j in range(i+1,n):
+            for k in password[j]:
+                 if k in word:
+                      break
+            else:
+                 count+=1
+
+print(count)
