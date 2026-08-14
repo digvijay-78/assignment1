@@ -37,4 +37,38 @@ Employees in IT Department:
 103 Amit IT 70000'''
 
 from collections import namedtuple
-company=namedtuple("company",["emp_id"," emp_name", "department", "salary"])
+company=namedtuple("company",["emp_id","emp_name","department","salary"])
+n=int(input("enter no of employee =>"))
+emp=[]
+for i in range(n):
+    print("enter details")
+    id=int(input("enter emp.id>"))
+    name=input("enter name")
+    dept=input("enter department name ")
+    sal=float(input("enter the salary"))
+    s=company(id,name,dept,sal)
+    emp.append(s)
+print("details")
+for x in emp:
+    print("employe in ",x.department,"department:")
+    print(x.emp_id ,x.emp_name ,x.department,x.salary)
+
+c=emp[0]
+for y in emp:
+    if y.salary>c.salary:
+        c=y
+print("Highest Salary Employee:")
+print(c.emp_id,c.emp_name,c.department,c.salary)
+
+d=emp[0]
+for y in emp:
+    if y.salary<d.salary:
+        d=y
+print("Lowest Salary Employee:")
+print(d.emp_id,d.emp_name,d.department,d.salary)
+
+m=0
+for k in emp:
+    m=m+k.salary
+avg=m/n
+print("Average Salary:\n",avg )
