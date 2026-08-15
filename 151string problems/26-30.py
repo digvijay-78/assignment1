@@ -43,7 +43,7 @@ for i in range(len(s)-len(a)+1):
         count+=1
 print(count)
 
-'''
+
 #29Remove occurrences of a word. S = "a test b test c", Word = "test", Remove All "a b c"
 s=input("enter the string").split()
 a="test"
@@ -52,3 +52,15 @@ for i in s:
     if i!=a:
         ans+=i+" "
 print(ans)
+
+'''
+#30Replace a word with another word S = "old data", Old="old", New="new" "new data"
+s="old data"
+a="old"
+b="new"
+v=s.replace(a,b)
+print(v)
+
+
+
+
