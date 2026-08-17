@@ -1,0 +1,205 @@
+1. [Theory] Which statement best describes an `if-elif-else` chain?
+A) Every true condition is executed
+B) Only the first true branch is executed
+C) Only the last true branch is executed
+D) All branches are checked and executed
+
+
+2. [Theory] What is the main purpose of indentation in Python conditional and loop blocks?
+A) It improves only readability
+B) It defines the block of statements controlled by the statement
+C) It converts code into machine language
+D) It is optional
+
+
+3. [Interview] What does `break` do inside nested loops?
+A) Stops all loops
+B) Stops the nearest enclosing loop
+C) Skips only the current statement
+D) Restarts the outer loop
+
+
+4. [Interview] What does `continue` do in a loop?
+A) Terminates the program
+B) Terminates the loop
+C) Skips the remaining statements of the current iteration and proceeds to the next iteration
+D) Repeats the current iteration forever
+
+
+5. [Theory] What is the difference between `=` and `==` in Python?
+A) Both perform comparison
+B) `=` assigns a value, while `==` compares values
+C) `==` assigns and `=` compares
+D) Both perform assignment
+
+
+6. [Interview] Which condition is true for an even positive integer `n` greater than 2?
+A) n % 2 == 1
+B) n % 2 == 0 and n > 2
+C) n // 2 == 0
+D) n % 2 != 0
+
+
+7. [Theory] What values are produced by `range(2, 10, 3)`?
+A) 2, 3, 4, 5, 6, 7, 8, 9
+B) 2, 5, 8
+C) 2, 5, 8, 10
+D) 3, 6, 9
+
+
+8. [Interview] Which situation can cause a `while` loop to become infinite?
+A) Its condition eventually becomes False
+B) The loop variable is updated toward termination
+C) The condition remains True because the relevant state never changes
+D) The loop contains an `if` statement
+
+
+9. [Theory] In Python, what is the result of `not (True and False)`?
+A) True
+B) False
+C) None
+D) Error
+
+
+10. [Interview] What is the advantage of using `elif` instead of several independent `if` statements when only one
+category should be selected?
+A) It guarantees every condition executes
+B) It prevents later branches from being selected after a previous condition succeeds
+C) It removes indentation
+D) It makes loops unnecessary
+
+
+11. [Theory] What does `//` perform in Python?
+A) Normal division
+B) Modulo
+C) Floor division
+D) Exponentiation
+
+
+12. [Interview] If `break` occurs inside an inner loop, what normally happens to the outer loop?
+A) The outer loop is also immediately terminated
+B) The outer loop continues normally
+C) The program always terminates
+D) The outer loop becomes infinite
+
+
+13. [Theory] Which expression checks whether `n` is divisible by both 3 and 5?
+A) n % 3 == 0 or n % 5 == 0
+B) n / 3 == 0 and n / 5 == 0
+C) n % 3 == 0 and n % 5 == 0
+D) n // 3 == 0 and n // 5 == 0
+
+
+14. [Interview] Why is `if x > 10` different from `if x >= 10`?
+A) The first includes 10 and the second excludes it
+B) The first excludes 10 and the second includes it
+C) They are always identical
+D) Both are syntax errors
+
+
+15. [Theory] What happens when a `for` loop completes normally without encountering `break` and has an `else`
+clause?
+A) The `else` clause executes
+B) The `else` clause is skipped
+C) The loop restarts
+D) Python raises an error
+
+
+16. [Interview] What is a common logical mistake when writing a range check for `10 <= x <= 20`?
+A) Using two comparisons
+B) Accidentally using `or` when both boundaries must be satisfied
+C) Using indentation
+D) Using `elif`
+
+
+17. [Theory] What does `range(5, 0, -1)` generate?
+A) 5, 4, 3, 2, 1
+B) 5, 4, 3, 2, 1, 0
+C) 0, 1, 2, 3, 4
+D) 4, 3, 2, 1, 0
+
+
+18. [Interview] In a nested `if`, why can the indentation level change the program's logic?
+A) Indentation only changes comments
+B) It determines which statements belong to which conditional block
+C) It changes variable types
+D) It changes arithmetic precedence
+
+
+19. [Theory] Which operator has higher logical precedence in Python?
+A) `or` has higher precedence than `and`
+B) `and` has higher precedence than `or`
+C) `not` has lower precedence than `or`
+D) All have identical precedence
+
+
+20. [Interview] What is the best way to trace a difficult loop during an interview?
+A) Guess the output
+B) Track the loop variable and important variables after every iteration
+C) Ignore conditional branches
+D) Count only the first iteration
+
+
+21. [Output Logic] What is printed?
+x = 8
+if x > 5:
+if x % 2 == 0:
+print("A")
+else:
+print("B")
+else:
+print("C")
+A) A
+B) B
+C) C
+D) Nothing
+
+
+22. [Output Logic] What is printed?
+n = 5
+while n > 1:
+if n % 2 == 0:
+n -= 2
+else:
+n -= 1
+print(n)
+A) 0
+B) 1
+C) 2
+D) 3
+
+
+23. [Output Logic] What is printed?
+for i in range(1, 5):
+if i == 3:
+continue
+print(i, end=" ")
+A) 1 2 3 4
+B) 1 2 4
+C) 2 4
+D) 1 3
+
+
+24. [Output Logic] What is printed?
+x = 12
+if x % 2 == 0:
+x //= 2
+elif x % 3 == 0:
+x += 3
+else:
+x -= 1
+print(x)
+A) 5
+B) 6
+C) 9
+D) 11
+
+
+25. [Interview Logic] A program must print `Pass` only when marks are at least 40 AND attendance is at least 75.
+Which condition is correct?
+A) marks >= 40 or attendance >= 75
+B) marks > 40 and attendance > 75
+C) marks >= 40 and attendance >= 75
+D) marks <= 40 and attendance <= 75
+
+

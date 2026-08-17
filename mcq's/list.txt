@@ -1,0 +1,243 @@
+1. Which of the following commands will create a list?
+a) list1 = list()
+b) list1 = []
+c) list1 = list([1, 2, 3])
+d) all of the mentioned
+Answer: d) all of the mentioned
+
+2. Suppose list1 is [4, 2, 2, 4, 5, 2, 1, 0], Which of the following is correct syntax for slicing operation?
+a) print(list1[2:])
+b) print(list1[:2])
+c) print(list1[:-2])
+d) all of the mentioned
+Answer: d) all of the mentioned
+
+3. Suppose list1 is [2, 33, 222, 14, 25], What is list1[:-1]?
+a) [2, 33, 222, 14]
+b) Error
+c) 25
+d) [25, 14, 222, 33, 2]
+Answer: a) [2, 33, 222, 14]
+
+4. What will be the output of the following Python code?
+names = ['Amir', 'Bear', 'Charlton', 'Daman']
+print(names[-1][-1])
+a) A
+b) Daman
+c) Error
+d) n
+Answer: d) n
+
+5. What will be the output of the following Python code?
+names1 = ['Amir', 'Bear', 'Charlton', 'Daman']
+names2 = names1
+names3 = names1[:]
+names2[0] = 'Alice'
+names3[1] = 'Bob'
+sum = 0
+for ls in (names1, names2, names3):
+    if ls[0] == 'Alice':
+        sum += 1
+    if ls[1] == 'Bob':
+        sum += 10
+print(sum)
+a) 11
+b) 12
+c) 21
+d) 22
+Answer: d) 22
+
+6. Suppose list1 is [1, 3, 2], What is list1 * 2?
+a) [2, 6, 4]
+b) [1, 3, 2, 1, 3]
+c) [1, 3, 2, 1, 3, 2]
+d) [1, 3, 2, 3, 2, 1]
+Answer: c) [1, 3, 2, 1, 3, 2]
+
+7. Suppose list1 = [0.5 * x for x in range(0, 4)], list1 is:
+a) [0, 1, 2, 3]
+b) [0, 1, 2, 3, 4]
+c) [0.0, 0.5, 1.0, 1.5]
+d) [0.0, 0.5, 1.0, 1.5, 2.0]
+Answer: c) [0.0, 0.5, 1.0, 1.5]
+
+8. What will be the output of the following Python code?
+list1 = [11, 2, 23]
+list2 = [11, 2, 2]
+print(list1 < list2)
+a) True
+b) False
+c) Error
+d) None
+Answer: b) False
+
+9. To insert 5 to the third position in list1, we use which command?
+a) list1.insert(3, 5)
+b) list1.insert(2, 5)
+c) list1.add(3, 5)
+d) list1.append(3, 5)
+Answer: b) list1.insert(2, 5)
+
+10. Suppose listExample is [3, 4, 5, 20, 5, 25, 1, 3], what is list1 after listExample.pop(1)?
+a) [3, 4, 5, 20, 5, 25, 1, 3]
+b) [1, 3, 3, 4, 5, 5, 20, 25]
+c) [3, 5, 20, 5, 25, 1, 3]
+d) [1, 3, 4, 5, 20, 5, 25]
+Answer: c) [3, 5, 20, 5, 25, 1, 3]
+
+11. What will be the output of the following Python code?
+print(list("a#b#c#d".split('#')))
+a) ['a', 'b', 'c', 'd']
+b) ['a b c d']
+c) ['a#b#c#d']
+d) ['abcd']
+Answer: a) ['a', 'b', 'c', 'd']
+
+12. What will be the output of the following Python code?
+myList = [1, 2, 3, 4, 5, 6]
+for i in range(1, 6):
+    myList[i - 1] = myList[i]
+for i in range(0, 6):
+    print(myList[i], end = " ")
+a) 2 3 4 5 6 1
+b) 6 1 2 3 4 5
+c) 2 3 4 5 6 6
+d) 1 1 2 3 4 5
+Answer: c) 2 3 4 5 6 6
+
+13. What will be the output of the following Python code?
+list1 = [1, 3]
+list2 = list1
+list1[0] = 4
+print(list2)
+a) [1, 3]
+b) [4, 3]
+c) [1, 4]
+d) [1, 3, 4]
+Answer: b) [4, 3]
+
+14. What will be the output of the following Python code?
+numbers = [1, 2, 3, 4]
+numbers.append([5,6,7,8])
+print(len(numbers))
+a) 4
+b) 5
+c) 8
+d) 12
+Answer: b) 5
+
+15. What will be the output of the following Python code?
+list1 = [1, 2, 3, 4]
+list2 = [5, 6, 7, 8]
+print(len(list1 + list2))
+a) 2
+b) 4
+c) 5
+d) 8
+Answer: d) 8
+
+16. What will be the output of the following Python code?
+veggies = ['carrot', 'broccoli', 'potato', 'asparagus']
+veggies.insert(veggies.index('broccoli'), 'celery')
+print(veggies)
+a) ['carrot', 'celery', 'broccoli', 'potato', 'asparagus']
+b) ['carrot', 'celery', 'potato', 'asparagus']
+c) ['carrot', 'broccoli', 'celery', 'potato', 'asparagus']
+d) ['celery', 'carrot', 'broccoli', 'potato', 'asparagus']
+Answer: a) ['carrot', 'celery', 'broccoli', 'potato', 'asparagus']
+
+17. What will be the output of the following Python code?
+m = [[x, x + 1, x + 2] for x in range(0, 3)]
+print(m)
+a) [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+b) [[0, 1, 2], [1, 2, 3], [2, 3, 4]]
+c) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+d) [0, 1, 2, 1, 2, 3, 2, 3, 4]
+Answer: b) [[0, 1, 2], [1, 2, 3], [2, 3, 4]]
+
+18. How many elements are in m?
+m = [[x, y] for x in range(0, 4) for y in range(0, 4)]
+print(m)
+a) 8
+b) 12
+c) 16
+d) 32
+Answer: c) 16
+
+19. What will be the output of the following Python code?
+values = [[3, 4, 5, 1], [33, 6, 1, 2]]
+v = values[0][0]
+for lst in values:
+    for element in lst:
+        if v > element:
+            v = element
+print(v)
+a) 1
+b) 3
+c) 5
+d) 6
+Answer: a) 1
+
+20. What will be the output of the following Python code?
+matrix = [[1, 2, 3, 4],
+          [4, 5, 6, 7],
+          [8, 9, 10, 11],
+          [12, 13, 14, 15]]
+for i in range(0, 4):
+    print(matrix[i][1], end = " ")
+a) 1 2 3 4
+b) 4 5 6 7
+c) 1 3 8 12
+d) 2 5 9 13
+Answer: d) 2 5 9 13
+
+21. What will be the output of the following Python code?
+data = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+print(data[1][0][0])
+a) 1
+b) 2
+c) 4
+d) 5
+Answer: d) 5
+
+22. What will be the output of the following Python code?
+points = [[1, 2], [3, 1.5], [0.5, 0.5]]
+points.sort()
+print(points)
+a) [[1, 2], [3, 1.5], [0.5, 0.5]]
+b) [[3, 1.5], [1, 2], [0.5, 0.5]]
+c) [[0.5, 0.5], [1, 2], [3, 1.5]]
+d) [[0.5, 0.5], [3, 1.5], [1, 2]]
+Answer: c) [[0.5, 0.5], [1, 2], [3, 1.5]]
+
+23. What will be the output of the following Python code?
+a=[10,23,56,[78]]
+b=list(a)
+a[3][0]=95
+a[1]=34
+print(b)
+a) [10, 34, 56, [95]]
+b) [10, 23, 56, [78]]
+c) [10, 23, 56, [95]]
+d) [10, 34, 56, [78]]
+Answer: c) [10, 23, 56, [95]]
+
+24. What will be the output of the following Python code?
+a=[1,2,3,4]
+b=[sum(a[0:x+1]) for x in range(0,len(a))]
+print(b)
+a) 10
+b) [1, 3, 5, 7]
+c) 4
+d) [1, 3, 6, 10]
+Answer: d) [1, 3, 6, 10]
+
+25. What will be the output of the following Python code?
+lst=[3,4,6,1,2]
+lst[1:2]=[7,8]
+print(lst)
+a) [3, 7, 8, 6, 1, 2]
+b) Syntax error
+c) [3,[7,8],6,1,2]
+d) [3, 4, 6, 7, 8]
+Answer: a) [3, 7, 8, 6, 1, 2]

@@ -1,0 +1,176 @@
+
+
+1. Who developed Python Programming Language?
+A. Wick van Rossum
+B. Rasmus Lerdorf
+C. Guido van Rossum
+D. Niene Stom
+Answer: C. Guido van Rossum
+
+2. Which type of Programming does Python support?
+A. object-oriented programming
+B. structured programming
+C. functional programming
+D. all of the mentioned
+Answer: D. all of the mentioned
+
+3. Is Python code compiled or interpreted?
+A. Python code is both compiled and interpreted
+B. Python code is neither compiled nor interpreted
+C. Python code is only compiled
+D. Python code is only interpreted
+Answer: A. Python code is both compiled and interpreted
+
+4. Which of the following is used to define a block of code in Python language?
+A. Indentation
+B. Key
+C. Brackets
+D. All of the mentioned
+Answer: A. Indentation
+
+5. Which of the following character is used to give single-line comments in Python?
+A. //
+B. #
+C. !
+D. /*
+Answer: B. #
+
+6. What is the return type of the input() function in Python?
+A. Integer
+B. Float
+C. String
+D. Boolean
+Answer: C. String
+
+7. Which of the following is the correct way to take an integer as input?
+A. x = input(int)
+B. x = int(input())
+C. x = input().int()
+D. x = integer(input())
+Answer: B. x = int(input())
+
+8. Which of the following is a valid Python variable name?
+A. 2number
+B. class
+C. my_variable
+D. my-variable
+Answer: C. my_variable
+
+9. Which statement about Python variables is correct?
+A. A variable must be declared with its data type before use
+B. Python variables are dynamically typed
+C. All variables must contain only integers
+D. Variables cannot change their data type
+Answer: B. Python variables are dynamically typed
+
+10. Which of the following is a Python keyword?
+A. value
+B. number
+C. def
+D. variable
+Answer: C. def
+
+11. What is the purpose of Python keywords?
+A. They are predefined words with special meaning in Python
+B. They are used only for storing values
+C. They are user-defined functions
+D. They are used only for comments
+Answer: A. They are predefined words with special meaning in Python
+
+12. What is lexical analysis in Python?
+A. Executing Python instructions
+B. Breaking source code into tokens
+C. Converting machine code into Python code
+D. Allocating memory to variables
+Answer: B. Breaking source code into tokens
+
+13. Which of the following is an example of a Python token?
+A. Keyword
+B. Identifier
+C. Operator
+D. All of the above
+Answer: D. All of the above
+
+14. What is parsing in Python?
+A. Converting source code into machine code directly
+B. Checking the grammatical structure of the code according to Python's syntax
+C. Storing variables in memory
+D. Printing the program output
+Answer: B. Checking the grammatical structure of the code according to Python's syntax
+
+15. What is generally produced after Python source code is compiled?
+A. .exe file
+B. .java file
+C. Bytecode
+D. .html file
+Answer: C. Bytecode
+
+16. What is the purpose of a .pyc file?
+A. It stores Python source code
+B. It stores compiled Python bytecode
+C. It stores only comments
+D. It stores Python documentation
+Answer: B. It stores compiled Python bytecode
+
+17. Where are .pyc files normally stored for imported Python modules?
+A. bin folder
+B. src folder
+C. __pycache__ folder
+D. python_files folder
+Answer: C. __pycache__ folder
+
+18. What is the primary role of the Python Virtual Machine (PVM)?
+A. It writes Python source code
+B. It executes Python bytecode
+C. It creates HTML pages
+D. It converts Python into C++ source code
+Answer: B. It executes Python bytecode
+
+19. Which sequence best represents the general execution process of a Python program?
+A. Source Code → Lexical Analysis → Parsing/Compilation → Bytecode → PVM → Execution
+B. Source Code → PVM → Lexical Analysis → HTML → Execution
+C. Source Code → Machine Code → HTML → PVM
+D. Source Code → Database → Bytecode → Browser
+Answer: A. Source Code → Lexical Analysis → Parsing/Compilation → Bytecode → PVM → Execution
+
+20. Which statement best describes the internal working of Python?
+A. Python always directly converts source code into native machine code before execution
+B. Python source code is processed into bytecode, which is then executed by the Python Virtual Machine
+C. Python programs are executed directly by the web browser
+D. Python does not perform parsing or compilation
+Answer: B. Python source code is processed into bytecode, which is then executed by the Python Virtual Machine
+
+21. Which of the following correctly uses the format() method to insert values into a string?
+A. "My name is {}".format("deepika")
+B. "My name is {}".insert("deepika")
+C. "My name is {}".add("deepika")
+D. "My name is {}".input("deepika")
+Answer: A. "My name is {}".format("deepika")
+
+22. Which of the following is an example of an f-string in Python?
+A. name = f"Hello {name}"
+B. name = format"Hello {name}"
+C. name = "Hello" + f(name)
+D. name = string("Hello {name}")
+Answer: A. name = f"Hello {name}"
+
+23. Which statement correctly takes multiple integer inputs in a single line?
+A. a, b, c = input()
+B. a, b, c = map(int, input().split())
+C. a, b, c = int(input().split())
+D. a, b, c = input(int).split()
+Answer: B. a, b, c = map(int, input().split())
+
+24. What is the purpose of map(int, input().split())?
+A. It takes multiple inputs, splits them, and converts each value into an integer
+B. It takes only one character as input
+C. It converts integers into strings
+D. It joins multiple inputs into one string
+Answer: A. It takes multiple inputs, splits them, and converts each value into an integer
+
+25. What does the split() method do when used with input()?
+A. Converts the input directly into integers
+B. Divides the input into multiple strings based on whitespace by default.
+C. Removes all characters from the input
+D. Converts the input into a tuple
+Answer: B. Divides the input into multiple strings based on whitespace by default.

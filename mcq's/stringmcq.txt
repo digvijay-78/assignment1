@@ -1,0 +1,98 @@
+Top 25 Python String Questions
+
+Part 1: Theory (Q1 - Q10)
+
+Q1.
+Strings in Python are:
+A) Mutable
+B) Immutable
+C) Mutable only with +=
+D) Depends on Python version
+
+Answer : B) Immutable 
+
+Q2.
+Which of these does NOT modify a string in place (returns a new string instead)?
+A) .upper()
+B) .replace()
+C) .strip()
+D) All string methods return new strings — none modify in place
+
+Answer : D) All string methods return new strings — none modify in place
+
+Q3.
+Which is the most reliable way to check if two strings have the same VALUE (not identity)?
+A) s1 is s2
+B) s1 == s2
+C) id(s1) == id(s2)
+D) hash(s1) is hash(s2)
+
+Answer : B) s1 == s2
+
+Q4.
+s.split() vs s.split(" ") — which statement is TRUE?
+A) Both behave identically in all cases
+B) split() collapses consecutive whitespace and ignores leading/trailing spaces; split(" ") treats every single space as a separate delimiter
+C) split(" ") is just a faster alias for split()
+D) split() cannot handle tabs or newlines
+
+Answer : B) split() collapses consecutive whitespace and ignores leading/trailing spaces; split(" ") treats every single space as a separate delimiter
+
+Q5.
+Why is repeated string concatenation with + inside a loop slower than "".join(list)?
+A) The + operator doesn't work on strings at all
+B) Each + creates a brand-new string object, making repeated concatenation roughly O(n²) overall, while join is O(n)
+C) join() uses more memory but runs faster in theory only
+D) There is no real performance difference in modern Python
+
+Answer : B) Each + creates a brand-new string object, making repeated concatenation roughly O(n²) overall, while join is O(n)
+
+
+Q6.
+What does string interning mean in Python?
+A) Strings are encrypted internally for security
+B) Certain strings (like short literals/identifiers) may be cached and reused, so identical values can share the same object in memory
+C) All strings are automatically converted to bytes internally
+D) Strings longer than 20 characters are split internally
+
+Answer : B) Certain strings (like short literals/identifiers) may be cached and reused, so identical values can share the same object in memory
+
+
+Q7.
+Regarding f-strings vs .format() vs % formatting, which is TRUE?
+A) All three have identical performance and are purely a style choice
+B) f-strings are evaluated at runtime and are generally the fastest and most readable of the three
+C) % formatting is deprecated and raises errors in Python 3
+D) .format() cannot access variables, only positional arguments
+
+Answer : B) f-strings are evaluated at runtime and are generally the fastest and most readable of the three
+
+Q8.
+Why can s1 is s2 sometimes return True and sometimes False for two strings with identical content?
+A) It's random / non-deterministic behavior
+B) Python may intern short, simple string literals (reusing the same object), but strings built dynamically (concatenation, input, slicing, etc.) usually aren't guaranteed to be interned
+C) is always returns True for strings
+D) is always returns False for strings
+
+Answer : B) Python may intern short, simple string literals (reusing the same object), but strings built dynamically (concatenation, input, slicing, etc.) usually aren't guaranteed to be interned
+
+
+Q9.
+Which is TRUE about the in operator for substring checks, e.g. "ab" in "abcabc"?
+A) It only checks the first character and ignores the rest
+B) It returns True/False, internally scanning for the substring (roughly O(n*m) worst case)
+C) It raises an error if the substring isn't found
+D) It only works with single characters, not substrings
+
+Answer : B) It returns True/False, internally scanning for the substring (roughly O(n*m) worst case)
+
+
+Q10.
+Why can you do "hello"[0] but not "hello"[0] = "H"?
+A) Indexing is a bug that Python happens to allow
+B) Reading by index works because strings support __getitem__, but assignment is blocked since strings don't support __setitem__ (immutability)
+C) Only lowercase strings support indexing
+D) The [0] = syntax doesn't exist anywhere in Python
+
+Answer : B) Reading by index works because strings support __getitem__, but assignment is blocked since strings don't support __setitem__ (immutability)
+

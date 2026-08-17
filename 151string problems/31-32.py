@@ -12,11 +12,18 @@ print(z)
 
 s="apple banana apple"
 a=s.split()
+b=set(a)
 for i in range(len(a)):
     c=0
-    v=a[0]
-    if v==a[i]:
-        c+=1
     v=a[i]
-    print(v)
-    print(a[i],":",c)
+    for j in range(len(a)):
+        if v==a[j]:
+            c+=1
+    print(v,":",c)
+
+for i in b:
+    print(i,a.count(i))
+
+
+
+
