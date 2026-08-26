@@ -1,5 +1,5 @@
 #20Merge Sorted Array
-nums1 = [1,2,3,0,0,0]
+nums1 = [0,1,2,3]
 nums2 = [2,5,6]
 m = []
 n = []
@@ -9,6 +9,7 @@ if len(nums2)!=0 and len(nums1)!=0:
             m.append(nums1[i])
         if i<len(nums2) and nums2[i]!=0:
             n.append(nums2[i])
+           
 res=[]
 i=0
 j=0
