@@ -214,6 +214,20 @@ d={
 }
 
 while True:
+    print("""=====================================
+ HOSPITAL PATIENT MANAGEMENT SYSTEM
+=====================================
+
+1. Add New Patient
+2. Search Patient
+3. Update Patient Disease
+4. Delete Patient Record
+5. Display All Patients
+6. Count Total Patients
+7. Display Patients By Disease
+8. Display Oldest Patient
+9. Display Youngest Patient
+10. Exit""")
     choice=int(input("ENTER THE CHOICE"))
     match choice:
         case 1:
@@ -240,8 +254,17 @@ while True:
             a=int(input("enter patient id"))
             if a in d:
                 print(d.get(a))
-            else:
-                print("Patient Record Not Found")
+            f=0
+            for k,v in d.items():
+                if a==k:
+                    print("patient id :",k)
+                    print("name:",v["name"])
+                    print("age:",v["age"])
+                    print("disease:",v["disease"])
+                    print("doctor :",v["doctor"])
+                    f=1
+                if f==0:
+                    print("Patient Record Not Found")
         case 3:
             print("accept PATIENT DISEASE")
             a=int(input("enter patient id"))
@@ -264,7 +287,7 @@ while True:
             print("display all reords")
             for id,details in d.items():
                  print("-"*30)
-                 print(id)
+                 print("patient id:",id)
                  
                  for k,v in details.items():
                      print(k,":",v)
@@ -274,10 +297,12 @@ while True:
         case 7:
             print("7. Display Patients By Disease")
             a=input("enter disease:")
+            c=0
             for k,v in d.items():
                 if v["disease"].lower()==a.lower():
                     print(k,v["name"])
-            else:
+                    c=1
+            if c==0:
                 print("No Patient Found")
         case 8:
             print("8. Display Oldest Patient")
@@ -289,7 +314,11 @@ while True:
                             w=m 
             for k,v in d.items():
                 if v["age"]==w:
-                    print(k,v)   
+                    print("patient id:",k)
+                    print("name:",v["name"])   
+                    print("age:",v["age"])   
+                    print("disease:",v["disease"])   
+                    print("doctor:",v["doctor"])   
         case 9:
             print("Display Youngest Patient")
             w=23252#w = list(d.values())[0]["age"]
@@ -300,7 +329,11 @@ while True:
                             w=m 
             for k,v in d.items():
                 if v["age"]==w:
-                    print(k,v)
+                    print("patient id:",k)
+                    print("name:",v["name"])   
+                    print("age:",v["age"])   
+                    print("disease:",v["disease"])   
+                    print("doctor:",v["doctor"])
         case 10:
             print("Thank You For Using Hospital Patient Management System")
             break
