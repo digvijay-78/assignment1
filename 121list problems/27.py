@@ -19,6 +19,15 @@ Constraints:
 intervals[i].length == 2
 0 <= starti <= endi <= 104"""
 
-intervals = [[1,3],[2,6],[8,10],[15,18]]
-for i in range(len(intervals)):
-    for j in range(len(intervals[i])):
+intervals =[[4,7],[1,4]]
+res=[]
+current=intervals[0]
+for rows in range(1,len(intervals)):
+        next=intervals[rows]
+        if current[-1]>=next[0]:
+            current=[min(current[0],next[0]), max(current[-1], next[-1])]
+        else:
+              res.append(current)
+              current=next
+res.append(current)
+print(res)
