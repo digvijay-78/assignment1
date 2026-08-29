@@ -10,7 +10,6 @@ b= a[s]
 print(ord(b))'''
 
 
-
 #13Get the Unicode code point before index. S = "Hello", Index = 1 72 (Unicode for 'H')
 '''
 a=input("enter the chr")

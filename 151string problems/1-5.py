@@ -3,6 +3,7 @@
 s = input("programming")
 print(len(s))
 
+
 #2)Copy one string to another.
 S1 =input( "source")
 s2=S1
@@ -38,6 +39,7 @@ if s1.lower() == s2.lower():
     print(0)
 else:
     print("Not Equal")
+
 
 
 

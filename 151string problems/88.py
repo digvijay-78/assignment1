@@ -23,36 +23,30 @@ print(res)
 
 
 
+# s = input("Enter the string: ")
+# d = int(input("Enter the distance: "))
 
+# res = ""
+# used = ""
 
+# for i in range(len(s)):
 
+#     # har position par aisa character dhundo
+#     for j in range(len(s)):
 
+#         ch = s[j]
 
+#         # character pehle use nahi hua ya uski frequency baaki hai
+#         if ch not in used:
 
-s = input("Enter the string: ")
-d = int(input("Enter the distance: "))
+#             # character ko result mein add karo
+#             res += ch
+#             used += ch
 
-res = ""
-used = ""
+#             # same character ko d distance ke baad add karo
+#             for k in range(d - 1):
+#                 pass
 
-for i in range(len(s)):
+#             break
 
-    # har position par aisa character dhundo
-    for j in range(len(s)):
-
-        ch = s[j]
-
-        # character pehle use nahi hua ya uski frequency baaki hai
-        if ch not in used:
-
-            # character ko result mein add karo
-            res += ch
-            used += ch
-
-            # same character ko d distance ke baad add karo
-            for k in range(d - 1):
-                pass
-
-            break
-
-print(res)
+# print(res)
