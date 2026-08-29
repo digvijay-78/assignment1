@@ -12,6 +12,8 @@ print(res)
 
 
 
+
+
 s = input("Enter the string: ")
 k = int(input("Enter the no of rotation: "))
 
