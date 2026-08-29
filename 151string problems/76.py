@@ -11,4 +11,3 @@ for i in range(len(s)):
         else:
             j+=1
 print(suffix[::-1])
-        

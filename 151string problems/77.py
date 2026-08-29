@@ -13,3 +13,4 @@ if len(res) == 0:
     print("No common substring found")
 else:
     print(res)
+    
