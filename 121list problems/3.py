@@ -11,6 +11,18 @@ print(len(s))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 '''    def removeElement(self, nums: List[int], val: int) -> int: 
         s=[]
         for i in range(len(nums)):

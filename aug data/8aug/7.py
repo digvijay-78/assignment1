@@ -44,4 +44,5 @@ a=int(input ("enter the no. of rotation"))
 po=arr[-a:]
 arr = po + arr[:-a]
 print(arr)
-        
+
+

@@ -1,6 +1,6 @@
 #77Find the longest substring that appears at both ends.
 #  S = "abracadabra" "abra"
-s="abracadabra"
+s=input("")
 res=""
 word=len(s)-1
 for i in range(len(s)):

@@ -36,14 +36,18 @@ p=[]
 for k in range(a):
     c=1
 
-    """p = []
-
-for k in range(a):
-    b = arr[:k] + arr[k+1:]
-    c = math.prod(b)
-    p.append(c)"""
     for j in range(a):
             if j!=k:
                  c=c*arr[j]
     p.append(c)
 print(p)
+
+
+
+
+"""p = []
+
+for k in range(a):
+    b = arr[:k] + arr[k+1:]
+    c = math.prod(b)
+    p.append(c)"""
