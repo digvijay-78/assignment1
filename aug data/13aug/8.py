@@ -53,23 +53,7 @@ while True:
     choice = int(input("Enter your choice: "))
     match choice:
         case 1:
-            m= []
-            row=int(input("Enter the no. of rows: "))
-            col=int(input("Enter the no. of columns: "))
-            for i in range(row):
-                rows=[]
-                for j in range(col):
-                    rows.append(int(input(f"Enter the element of [{i},{j}]: ")))
-                m.append(rows)
-            print(m)
-            c=[]
-            for i in range(row):
-                for j in range(col):
-                    if j>i:
-                        if m[i][j]%2==0:
-                            c.append(m[i][j])
-            print("\ncount of even number above main diagonal: ", len(c),"\n",c)
-            
+            m
         case 2:
             m= []
             row = int(input("Enter the no. of rows: "))
