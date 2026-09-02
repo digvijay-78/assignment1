@@ -145,7 +145,8 @@ NUMBER ANALYSIS SYSTEM
 
 Scenario:
 
-A software company wants to develop a Number Analysis System. The application should be menu-driven and perform different mathematical operations on a given number.
+A software company wants to develop a Number Analysis System. The application should be menu-driven and perform 
+different mathematical operations on a given number.
 
 MENU
 
