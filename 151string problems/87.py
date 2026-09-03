@@ -8,6 +8,11 @@ for i in range(len(s)):
 
 
 
+
+
+
+
+
 s = "aab"
 z = []
 for i in range(len(s)):
