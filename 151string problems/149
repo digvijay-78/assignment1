@@ -1,0 +1,22 @@
+#149 Check if two strings are scrambled versions of each other.
+#S1 = "great", S2 = "rgeat"
+#TRUE
+
+s=input("enter the scrambled version")
+s2=input("enter the scrambled version")
+l=0
+r=0
+while l<len(s):
+    if len(s)!=len(s2):
+        print(False)
+        break
+    else:
+    
+        if s[l] in s2:
+            r+=1
+        else:
+            print("not the scrambled version")
+            break
+    l+=1
+else:
+    print(True)
