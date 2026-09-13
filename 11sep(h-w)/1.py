@@ -198,3 +198,15 @@ According to user choice call the required functions from packages.
 
 
 --------------------------------------------------"""
+
+
+import time
+
+start = time.time()
+
+for i in range(1000000):
+    pass
+
+end = time.time()
+
+print(end - start)

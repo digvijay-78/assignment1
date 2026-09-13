@@ -34,7 +34,7 @@ while True:
 7. Show Appointments
 8. Generate Bill
 9. Exit""")
-    choice=int(input("enter the choice"))
+    choice=(input("enter the choice"))
     match choice:
         case 1:
             print(" Add Patient")
