@@ -1,0 +1,1 @@
+from .eono import evenodd

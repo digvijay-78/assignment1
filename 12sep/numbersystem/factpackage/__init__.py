@@ -1,0 +1,1 @@
+from factno import fact

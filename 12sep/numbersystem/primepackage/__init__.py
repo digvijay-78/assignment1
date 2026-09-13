@@ -1,0 +1,1 @@
+from .primeno import prime
