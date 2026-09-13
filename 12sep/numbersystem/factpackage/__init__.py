@@ -1,1 +1,1 @@
-from factno import fact
+from .factno import fact
