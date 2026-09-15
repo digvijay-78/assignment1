@@ -169,19 +169,176 @@
 
 # print(url)
 
-import pygame
+# import pygame
 
-pygame.init()
+# pygame.init()
 
-screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("My Game")
+# screen = pygame.display.set_mode((600, 400))
+# pygame.display.set_caption("My Game")
 
-running = True
+# running = True
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+# while running:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             running = False
 
-pygame.quit()
+# pygame.quit()
 
+
+
+# from reportlab.pdfgen import canvas
+
+# pdf = canvas.Canvas("report.pdf")
+
+# pdf.drawString(100, 750, "Hospital Management System")
+# pdf.drawString(100, 700, "Patient Name: Aman")
+# pdf.drawString(100, 650, "Age: 21")
+
+# pdf.save()
+
+# from reportlab.pdfgen import canvas
+# from reportlab.platypus import Table
+# from reportlab.lib import colors
+
+# pdf = canvas.Canvas("patient_report.pdf")
+
+# # 1. Font
+# pdf.setFont("Helvetica-Bold", 18)
+# pdf.drawString(100, 780, "Hospital Patient Report")
+
+# # 2. Patient information
+# pdf.setFont("Helvetica", 12)
+# pdf.drawString(100, 740, "Patient Name: Aman")
+# pdf.drawString(100, 720, "Age: 21")
+# pdf.drawString(100, 700, "Patient ID: 101")
+
+# # 3. Line
+# pdf.line(100, 680, 500, 680)
+
+# # 4. Rectangle
+# pdf.rect(90, 550, 430, 100)
+
+# # 5. Table
+# data = [
+#     ["Test", "Result", "Status"],
+#     ["Blood Pressure", "120/80", "Normal"],
+#     ["Temperature", "98.6 F", "Normal"],
+#     ["Heart Rate", "72 bpm", "Normal"]
+# ]
+
+# table = Table(data, colWidths=[150, 130, 100])
+
+# table.wrapOn(pdf, 400, 200)
+# table.drawOn(pdf, 120, 400)
+
+# # 6. Image
+# pdf.drawImage(
+#     "xys.jpg",
+#     100,
+#     150,
+#     width=150,
+#     height=100
+# )
+
+# # 7. New page
+# pdf.showPage()
+
+# pdf.setFont("Helvetica-Bold", 18)
+# pdf.drawString(100, 780, "Patient Report - Page 2")
+
+# pdf.setFont("Helvetica", 12)
+# pdf.drawString(100, 740, "Doctor's Notes:")
+# pdf.drawString(100, 710, "Patient is healthy and requires regular checkup.")
+
+# # 8. Save PDF
+# pdf.save()
+
+
+
+
+# import customtkinter as ctk
+
+# root = ctk.CTk()
+
+# root.title("Hospital Management")
+# root.geometry("500x400")
+
+# root.mainloop()
+
+# import customtkinter as ctk
+
+# root = ctk.CTk()
+
+# root.title("Hospital Management")
+# root.geometry("500x400")
+
+# label = ctk.CTkLabel(root, text="Patient Name")
+# label.pack(pady=10)
+
+# entry = ctk.CTkEntry(root, placeholder_text="Enter Name")
+# entry.pack(pady=10)
+
+
+# def add():
+#     name = entry.get()
+#     print(name)
+
+
+# button = ctk.CTkButton(root, text="Add Patient", command=add)
+# button.pack(pady=10)
+
+# root.mainloop()
+
+# import pyttsx3
+
+# engine = pyttsx3.init()
+
+# engine.say("Hello, welcome to Python")
+
+# engine.runAndWait()
+
+
+# import pyttsx3
+
+# engine = pyttsx3.init()
+
+# engine.setProperty("rate", 150)
+
+# engine.say("Hello, I am learning Python")
+
+# engine.runAndWait()
+
+# import pyttsx3
+
+# engine = pyttsx3.init()
+
+# engine.setProperty("volume", 1.0)
+
+# engine.say("Hello Python")
+
+# engine.runAndWait()
+
+# import pyttsx3
+
+# engine = pyttsx3.init()
+
+# engine.setProperty("rate", 150)
+# engine.setProperty("volume", 1.0)
+
+# voices = engine.getProperty("voices")
+# engine.setProperty("voice", voices[1].id)
+
+# engine.say("Hello, welcome to Hospital Management System")
+
+# engine.runAndWait()
+
+# from pynput import mouse
+
+# def move(x, y):
+#     print(x, y)
+
+# listener = mouse.Listener(on_move=move)
+
+# listener.start()
+# listener.join()
