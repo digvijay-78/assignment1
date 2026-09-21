@@ -20,3 +20,10 @@
 # | **6** | `code_runner.py`        | ▶️ Code Execution                                        | `subprocess`, `time`             |
 # | **7** | `report.py`             | 📊 Statistics + Complete Terminal Report + Visualization | `ast`, `rich`                    |
 # | —     | `pycode_inspector.py`   | 🚀 Entry Point / Controller                              | `sys`                            |
+
+
+from identifier_checker import analyze_file
+
+path = input("ENTER PYTHON FILE: ")
+
+analyze_file(path)
