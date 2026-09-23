@@ -24,7 +24,7 @@ elif path.is_dir():
     print("Folder")
     print(path.name+"/")
     for root, folders, files in os.walk(path):
-        for folder in folders:
+        for folder in folders.copy():
             if folder in ignore_folders:
                 folders.remove(folder)
         root=Path(root)

@@ -40,36 +40,29 @@
 #     print("Hello")
 # """
 
+# import ast
+
+# code = """
+# x = 10
+# y = x + 5
+# print(y)
+# """
+
 # tree = ast.parse(code)
 
-# for node in ast.walk(tree):
+# # for node in ast.walk(tree):
 
-#     if isinstance(node, ast.FunctionDef):
-#         print("Function:", node.name)
-#     elif isinstance(node,ast.Name):
-#         print("variable",node.id)
-#     elif isinstance(node, ast.ClassDef):
-#         print("Class:", node.name)
+# #     if isinstance(node, ast.Name):
 
-import ast
-
-code = """
-x = 10
-y = x + 5
-print(y)
-"""
-
-tree = ast.parse(code)
+# #         print(node.id, type(node.ctx).__name__)
 
 # for node in ast.walk(tree):
 
 #     if isinstance(node, ast.Name):
 
-#         print(node.id, type(node.ctx).__name__)
+#         if isinstance(node.ctx, ast.Store):
+#             print("Variable:", node.id)
 
-for node in ast.walk(tree):
 
-    if isinstance(node, ast.Name):
-
-        if isinstance(node.ctx, ast.Store):
-            print("Variable:", node.id)
+x = 10
+print(y)

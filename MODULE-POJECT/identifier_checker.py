@@ -1,28 +1,26 @@
 from pathlib import Path
 import ast
-
 def analyze_file(path):
 
-    path = Path(input("ENTER PYTHON FILE: "))
+    path = Path(path)
 
     with open(path, "r") as f:
         code = f.read()
 
     tree = ast.parse(code)
-    function=[]
+    functions=[]
     classes=[]
-    variable=[]
-    paramter=[]
+    variables=[]
+    paramters=[]
     imports=[]
     calls=[]
 
-    print("\n========== IDENTIFIER REPORT ==========\n")
 
     for node in ast.walk(tree):
         if isinstance (node,ast.FunctionDef):
-            function.append(node.name)
+            functions.append(node.name)
             for arg in node.args.args:
-                paramter.append(arg.arg)
+                paramters.append(arg.arg)
 
         elif isinstance(node,ast.ClassDef):
             classes.append(node.name)
@@ -32,7 +30,7 @@ def analyze_file(path):
 
         elif isinstance(node,ast.Name):
             if isinstance(node.ctx, ast.Store):
-                variable.append(node.id)
+                variables.append(node.id)
 
         elif isinstance(node,ast.Import):
             for name in node.names:
@@ -40,11 +38,33 @@ def analyze_file(path):
 
         elif isinstance(node,ast.ImportFrom):
             for name in node.names:
-                imports.append(name.name)
+                if node.module:
+                    imports.append(node.module + "." + name.name)
+                else:
+                    imports.append(name.name)
 
         elif isinstance(node,ast.Call):
             if isinstance(node.func,ast.Name):
-                print("Called :",node.func.id)
+                calls.append(node.func.id)
 
             elif isinstance(node.func,ast.Attribute):
-                print("Method called :",node.func.attr)
+                calls.append(node.func.attr)
+    print("\n========== IDENTIFIER REPORT ==========\n")
+    print("\nfunctions\n","-"*7)
+    for i in functions:
+        print(i)
+    print("\nclasses\n","-"*7)
+    for i in classes:
+        print(i)
+    print("variables\n","-"*7)
+    for i in variables:
+        print(i)
+    print("\nPARAMETERS\n","-"*7)
+    for i in paramters:
+        print(i)
+    print("\nIMPORT\n","-"*7)
+    for i in imports:
+        print(i)
+    print("\nMETHOD CALLS\n","-"*7)
+    for i in calls:
+        print(i)

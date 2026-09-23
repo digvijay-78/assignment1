@@ -35,3 +35,15 @@
 
 # ✅ ALL TEST CASES PASSED
 
+from pathlib import Path
+import subprocess
+import sys
+def run_code(path):
+    path=Path(path)
+    result = subprocess.run(
+        [sys.executable, str(path)],
+        capture_output=True,
+        text=True
+    )
+
+    

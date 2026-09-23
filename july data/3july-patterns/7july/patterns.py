@@ -88,7 +88,7 @@ Q7
 111
 0000
 11111
-
+'''
 n=int(input("="))
 for i in range(1,n+1):
 	print()
@@ -99,6 +99,7 @@ for i in range(1,n+1):
 			print(1,end=" ")
 
 
+'''
 
 Q8
 
