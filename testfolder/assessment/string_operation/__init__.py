@@ -1,0 +1,1 @@
+from .substring import all_string

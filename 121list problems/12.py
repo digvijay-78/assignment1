@@ -6,4 +6,4 @@ for i in range(len(nums)):
 s=[] 
 for i in l: 
     s.append(sum(i)) 
-print(max(s)) 
+print(max(s))

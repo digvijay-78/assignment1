@@ -1,6 +1,16 @@
 #13Find All Numbers Disappeared in an Array 
 arr= [4,3,2,7,8,2,3,1]
-for i in range(len(arr)-1):
-         if arr[i+1]-arr[i]!=1: 
-            print("Missing Value =", arr[i] + 1) 
-            break
+# for i in range(len(arr)-1):
+#          if arr[i+1]-arr[i]!=1: 
+#             print("Missing Value =", arr[i] + 1) 
+#             break
+
+# a=set(arr)
+# b=list(a)
+# c=[]
+# for i in range(len(b)):
+#     for j in range(i+1,len(b)+1):
+#         if abs(j-i)!=1:
+#              b.append(j+1)
+#              break
+# print(set(b))

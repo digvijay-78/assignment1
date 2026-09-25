@@ -25,8 +25,13 @@
 from identifier_checker import analyze_file
 from error_analyzer import analyze_error
 from code_runner import run_code
+from report import generate_report
+
+
+
 path = input("ENTER PYTHON FILE: ")
 
-analyze_file(path)
-analyze_error(path)
-run_code(path)
+# analyze_file(path)
+# analyze_error(path)
+# run_code(path)
+generate_report(path)

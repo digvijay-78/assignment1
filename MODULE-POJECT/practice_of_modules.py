@@ -64,5 +64,7 @@
 #             print("Variable:", node.id)
 
 
-x = 10
-print(y)
+a = int(input())
+b = int(input())
+
+print(a + b)

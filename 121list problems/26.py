@@ -18,7 +18,7 @@ Output: [0,1,2]
 Explanation:
 The array has one each of 0, 1, and 2, arranged in-place in the order 0, 1, 2."""
 
-nums = [2,0,1]
+nums = [2,0,2,1,1,0]
 c=0
 c1=0
 c2=0
