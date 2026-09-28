@@ -38,23 +38,25 @@
 from pathlib import Path
 import subprocess
 import sys
+from .visualization import show_result
+import winsound
 def run_code(path):
     path=Path(path)
-    result = subprocess.run(
-        [sys.executable, str(path)],
-        capture_output=True,
-        text=True
-    )
+    # result = subprocess.run(
+    #     [sys.executable, str(path)],
+    #     capture_output=True,
+    #     text=True
+    # )
 
-    if result.returncode !=0:
-        print("\n========code runner=========\n")
-        print("Runtime error found")
-        print(result.stderr)
-        print("Test cases cannot be executed.")
-        return
-    print("\n========code runner=========\n")
-    print("code executed successfully.")
-
+    # if result.returncode !=0:
+    #     print("\n========code runner=========\n")
+    #     print("Runtime error found")
+    #     print(result.stderr)
+    #     print("Test cases cannot be executed.")
+    #     return
+    # print("\n========code runner=========\n")
+    # print("code executed successfully.")
+    print("\n======== CODE RUNNER =========\n")
     n=int(input("enter number of test cases :"))
 
     passed=0
@@ -63,6 +65,7 @@ def run_code(path):
     for i in range(1,n+1):
         print(f"\n========== TEST CASE {i} ==========")
         user_input=[]
+
         print("enter the input:")
 
         while True:
@@ -71,7 +74,15 @@ def run_code(path):
                 break
             user_input.append(value)
         input_data="\n".join(user_input)
-        expected=input("enter expected output:")
+        expected_output=[]
+        print("enter expected output:")
+        while True:
+            value=input()
+            if value.lower()=="end":
+                break
+            expected_output.append(value)
+
+        expected="\n".join(expected_output)
 
         test_result=subprocess.run(
             [sys.executable,str(path)],
@@ -86,19 +97,37 @@ def run_code(path):
 
         print("\n Actual output :")
         print(actual)
-        if actual==expected:
-            print("\n PASSED")
+        if test_result.returncode !=0:
+            print("runtime error")
+            print(test_result.stderr)
+            failed+=1
+        elif actual==expected:
+            print("PAssed")
             passed+=1
         else:
-            print("\nFAILED")
+            print("\n failed")
             failed+=1
+            print("\nPossible Cause : Output does not match expected output")
+            print("Suggestion     : Check the program logic and data types")
+        
     print("""\n=================
           FINAL RESULT
           =======================""")
     print("total test cases :",n)
     print("passed :",passed)
     print("Failed :",failed)
+
     if failed==0:
         print("\n ALL TEST CASES PASSED")
     else:
         print("\n SOME TEST CASES FAILED")
+    
+    show_result(passed, failed)
+    if failed == 0:
+        winsound.MessageBeep()
+    else:
+        winsound.MessageBeep()
+    return {
+    "total": n,
+    "passed": passed,
+    "failed": failed}

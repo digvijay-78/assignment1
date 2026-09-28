@@ -1,0 +1,15 @@
+setup.py
+python_inspector/__init__.py
+python_inspector/code_runner.py
+python_inspector/error_analyzer.py
+python_inspector/file_scanner.py
+python_inspector/identifier_checker.py
+python_inspector/main.py
+python_inspector/report.py
+python_inspector/sample.py
+python_inspector/visualization.py
+python_inspector/voice.py
+python_inspector.egg-info/PKG-INFO
+python_inspector.egg-info/SOURCES.txt
+python_inspector.egg-info/dependency_links.txt
+python_inspector.egg-info/top_level.txt

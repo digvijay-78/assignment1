@@ -31,7 +31,7 @@ def scan_file(path):
                     folders.remove(folder)
             root=Path(root)
             level=len(root.relative_to(path).parts)
-            indent="  "*level
+            indent="|  "*(level)
             for folder in folders:
                 print(indent + "├── " + folder + "/")
 
@@ -41,13 +41,3 @@ def scan_file(path):
                     py_files.append(root/file)
     return py_files
 
-
-path = input("ENTER PROJECT PATH: ")
-
-files = scan_file(path)
-
-print("\nPYTHON FILES FOUND")
-print("------------------")
-
-for file in files:
-    print(file)

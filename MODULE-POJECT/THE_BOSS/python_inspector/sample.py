@@ -64,7 +64,16 @@
 #             print("Variable:", node.id)
 
 
-a = int(input())
-b = int(input())
+# a = int(input())
+# b = int(input())
 
-print(a + b)
+# print(a + b)
+
+
+# import winsound
+
+# winsound.Beep(1000, 500)
+
+# import winsound
+
+# winsound.MessageBeep()

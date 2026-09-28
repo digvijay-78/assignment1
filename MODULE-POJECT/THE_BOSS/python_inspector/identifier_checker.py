@@ -49,22 +49,11 @@ def analyze_file(path):
 
             elif isinstance(node.func,ast.Attribute):
                 calls.append(node.func.attr)
-    print("\n========== IDENTIFIER REPORT ==========\n")
-    print("\nfunctions\n","-"*7)
-    for i in functions:
-        print(i)
-    print("\nclasses\n","-"*7)
-    for i in classes:
-        print(i)
-    print("variables\n","-"*7)
-    for i in variables:
-        print(i)
-    print("\nPARAMETERS\n","-"*7)
-    for i in paramters:
-        print(i)
-    print("\nIMPORT\n","-"*7)
-    for i in imports:
-        print(i)
-    print("\nMETHOD CALLS\n","-"*7)
-    for i in calls:
-        print(i)
+    return {
+        "functions": functions,
+        "classes": classes,
+        "variables": variables,
+        "parameters": paramters,
+        "imports": imports,
+        "calls": calls
+    }
