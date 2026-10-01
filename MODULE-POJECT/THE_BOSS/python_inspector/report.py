@@ -4,24 +4,17 @@ from rich.table import Table
 c= Console()
 def generate_report(path,files,analysis=None,error=None,test=None):
     c.print(Panel(
-            "Python INSPECTOR",
-            title="PROJECT ANALYSIS",
-            border_style="green")
-    )
+            "Python INSPECTOR",title="PROJECT ANALYSIS",border_style="green"))
     #file ka info
     c.print("[bold] PATH :[/bold]", path)
     c.print(Panel("PYTHON FILES FOUND",
-            title="FIle INFORMATION",
-            border_style="blue")
-            )
+    title="FIle INFORMATION",border_style="blue"))
     for i in files:
         c.print(f"-> {i}")
     #identifiers 
     if analysis:
-        c.print(Panel("identifiers",
-                      title="identifiers analysis",
-                      border_style="cyan")
-                      )
+        c.print(Panel("identifiers",title="identifiers analysis",
+                      border_style="cyan"))
         t=Table()
         t.add_column("category")
         t.add_column("count")
@@ -39,12 +32,9 @@ def generate_report(path,files,analysis=None,error=None,test=None):
                     c.print(f"[bold]{k.title()}:[/bold]{v}")
     if test:
         c.print(Panel("code testing",
-              title=" code testing",
-              border_style="yellow")
-              )
+              title=" code testing",border_style="yellow"))
         for k,v in test.items():
             c.print(f"[bold]{k.title()}:[/bold]{v}")
     c.print(Panel("analysis completed",
               title="END OF REPORT",
-              border_style="green")
-              )
+              border_style="green"))

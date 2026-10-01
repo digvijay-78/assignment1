@@ -54,37 +54,43 @@ def inspect(path):
     print("-"*7)
     for i in files:
         print(i)
-
-    file_name=input("enter the python file name:")
-    selected_file=None
-    for i in files:
-        if Path(i).name==file_name:
-            selected_file=i
+    while True:
+        file_name=input("enter the python file name(you can quit with 'exit':")
+        if file_name.lower()=="exit":
             break
-    else:
-        print("file not found.")
-        return
-    print("\n selecteed file :",selected_file)
-
-    error_choice=input("DO YOU WANT TO CHECK ERROS?{Y/N}:")
-    error_data = None
-    if error_choice.lower()=="y":
-        error_data=analyze_error(selected_file)
-    test_data=None
-    test_choice = input("\nDO YOU WANT TO RUN TEST CASES? (Y/N): ")
-    if test_choice.lower()=="y":
-        if error_data is None:
-            error_data=analyze_error(selected_file)
-        if error_data["category"].lower()=="no error":
-            test_data=run_code(selected_file)
+        selected_file=None
+        for i in files:
+            if Path(i).name==file_name:
+                selected_file=i
+                break
         else:
-            print("test cases cannot be executed because of an error was found")
+            print("file not found.")
+            continue
+        print("\n selecteed file :",selected_file)
 
-    try:
-        analysis_data = analyze_file(selected_file)
-    except SyntaxError:
-        analysis_data=None
-    generate_report(
-        path,files,analysis_data,error_data,test_data)
-    if analysis_data:
-        show_test_result(files, analysis_data)
+        error_choice =input("DO YOU WANT TO CHECK ERROS?{Y/N}:")
+        error_data= None
+        if error_choice.lower()=="y":
+            error_data=analyze_error(selected_file)
+        test_data=None
+        test_choice=input("\nDO YOU WANT TO RUN TEST CASES? (Y/N): ")
+        if test_choice.lower()=="y":
+            if error_data is None:
+                error_data=analyze_error(selected_file)
+            if error_data["category"].lower()=="no error":
+                test_data=run_code(selected_file)
+            else:
+                print("test cases cannot be executed because of an error was found")
+
+        try:
+            analysis_data = analyze_file(selected_file)
+        except SyntaxError:
+            analysis_data=None
+        generate_report(
+            path,files,analysis_data,error_data,test_data)
+        if analysis_data:
+            show_test_result(files, analysis_data)
+        again =input("\n Do you want to inspect another file ?{y/n}:")
+        if again.lower()!= "y":
+            break
+    print("\nPYTHON inspector analysis completed")
