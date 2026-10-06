@@ -1,0 +1,3 @@
+deep 80
+rash 75
+katappa 90

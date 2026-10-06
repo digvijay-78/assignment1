@@ -3,7 +3,7 @@ target=5
 start=0
 end=len(arr)-1
 while start<end:
-    mid=(start+end)//2
+    mid=(start+end)//2 # mid =( s + (e-s))//2
     if arr[mid]==target:
         print(mid)
         break
