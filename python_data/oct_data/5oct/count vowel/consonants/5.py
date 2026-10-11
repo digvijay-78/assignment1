@@ -16,3 +16,23 @@ Expected Output:
 
 Total Vowels: <display count>
 Total Consonants: <display count>"""
+
+with open ("paragraph.txt","a"
+) as f:
+    d=f.write(input(""))
+try :
+    with open("paragraph.txt","r") as f:
+        v=0
+        c=0
+        for i in f:
+            m=i.split()
+            for k in m:
+                for j in k :
+                    if j.lower() in "aeiou":
+                        v+=1
+                    elif j.isalpha():
+                        c+=1
+        print(f"Total Vowels: <{v}>")
+        print(f"Total Consonants: <{c}>")
+except FileExistsError:
+    print("error")

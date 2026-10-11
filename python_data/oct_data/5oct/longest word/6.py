@@ -25,7 +25,6 @@ try :
         l=""
         for k in f:
             m=k.split()
-            
             for i in m:
                 if len(i)>len(l):
                     c=len(i)

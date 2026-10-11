@@ -59,7 +59,6 @@ try :
     print("""Attendance Report
 -------------------------""")
     with open("attendance.txt","r") as f:
-        
         p=0
         a=0
         for i in f:
@@ -67,7 +66,6 @@ try :
                 p+=1
             else:
                 a+=1
-
         per=(p/n)*100
         print("Total Students:",n)
         print("Present Students:",p)
