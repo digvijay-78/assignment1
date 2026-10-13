@@ -6,3 +6,4 @@ def speak(text):
     engine.runAndWait()
 if __name__ == "__main__":
     speak("Python Inspector analysis completed successfully")
+    

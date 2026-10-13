@@ -6,3 +6,6 @@ path=input("Enter your Python project path: ")
 python_inspector.inspect(path)
 
 speak("Python Inspector analysis completed successfully")
+
+
+
