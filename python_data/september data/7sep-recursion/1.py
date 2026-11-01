@@ -18,7 +18,8 @@ def febo(n):
         return n
     elif n==1:
         return 1
-    return febo(n-1)+febo(n-2) 
+    return febo(n-1)+febo(n-2)
+ 
 n=int(input("enter the months no"))
 for i in range(n):
     print(febo(i),end=" ")
