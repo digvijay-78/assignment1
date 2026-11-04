@@ -1,0 +1,47 @@
+QNO 2:
+
+Customer and Orders
+Problem Statement:
+A retail store wants to generate a report displaying all customers and their latest order details. The report should include customers who have not placed any orders.
+
+Tables:
+Customer (cust_id, cust_name)
+
+ create table Customer_3nov(cust_id int, cust_name varchar(40));
+Query OK, 0 rows affected (0.03 sec)
+
+
+Orders (order_id, cust_id, order_date, total_amount)
+ create table Orders_3nov(order_id int,cust_id int,order_date date,total_amount decimal (10,2));
+Query OK, 0 rows affected (0.03 sec)
+
+
+Query 1:
+Write an SQL query using LEFT JOIN to display all customers with their order details, ensuring that customers with no orders are still included in the result.
+select * from Customer_3nov as c left join Orders_3nov as o on o.cust_id=c.cust_id ;
+Empty set (0.01 sec)
+Query 2:
+Problem Statement:
+The store wants to generate a report including all orders placed, even if the customer record is missing (i.e., orphan orders due to data inconsistency).
+
+
+select * from Customer_3nov as c right join Orders_3nov as o on o.cust_id=c.cust_id where c.cust_id is null ;
+Empty set (0.00 sec)
+
+
+Query 3:
+The store wants a comprehensive report showing all customers and all orders, even if some customers have no orders and some orders have missing customer details.
+
+ select * from Customer_3nov as c left join Orders_3nov as o on o.cust_id=c.cust_id
+    -> union
+    ->  select * from Customer_3nov as c right join Orders_3nov as o on o.cust_id=c.cust_id ;
+Empty set (0.00 sec)
+
+
+Query 4:
+Problem Statement:
+The store wants to analyze all possible customer-order pairings, regardless of actual transactions.
+
+
+ select * from Customer_3nov as c cross join Orders_3nov as o ;
+Empty set (0.00 sec)

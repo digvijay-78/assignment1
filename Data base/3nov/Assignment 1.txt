@@ -1,0 +1,147 @@
+Assignment 1:
+ Understanding INNER JOIN
+Problem Statement:
+Consider the following tables:
+Employees
+emp_id emp_name dept_id
+1 Alice 101
+2 Bob 102
+3 Charlie 103
+4 David 101
+
+Departments
+dept_id  dept_name
+101      HR
+102     IT
+104     Finance
+
+
+create table Employees_3nov(emp_id int, emp_name varchar(39) ,dept_id int);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table Department_3nov(dept_id int, dept_name varchar(30));
+Query OK, 0 rows affected (0.03 sec)
+
+
+
+Tasks:
+
+Write a query to display employees and their corresponding department names using INNER JOIN.
+Modify the query to display only employees who belong to the "HR" department.
+
+
+select e.emp_name,d.dept_name from Employees_3nov as e inner join department_3nov as d on e.dept_id =d.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Alice    | HR        |
+| Bob      | IT        |
+| David    | HR        |
++----------+-----------+
+3 rows in set (0.00 sec)
+
+
+
+
+select e.emp_name,d.dept_name from Employees_3nov as e inner join department_3nov as d on e.dept_id =d.dept_id and d.dept_name="hr";
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Alice    | HR        |
+| David    | HR        |
++----------+-----------+
+2 rows in set (0.00 sec)
+
+
+
+Assignment 2: LEFT JOIN Practice
+
+Using the same Employees and Departments tables, answer the following:
+Tasks:
+Write a query using LEFT JOIN to display all employees and their department names, including employees with no department.
+Modify the query to count how many employees are without a department.
+select e.emp_name,d.dept_name from Employees_3nov as e left join department_3nov as d on e.dept_id =d.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| Alice    | HR        |
+| Bob      | IT        |
+| Charlie  | NULL      |
+| David    | HR        |
++----------+-----------+
+4 rows in set (0.00 sec)
+
+
+
+select count(*) from Employees_3nov as e left join department_3nov as d on e.dept_id =d.dept_id  where d.dept_name is null ;
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+
+
+
+Assignment 3: RIGHT JOIN Practice
+Problem Statement:
+Consider the same tables.
+Tasks:
+Write a query using RIGHT JOIN to display all departments and their employees, including departments with no employees.
+Find the names of departments that have no employees assigned.
+
+select e.emp_name,d.dept_name from Employees_3nov as e right join department_3nov as d on e.dept_id =d.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| David    | HR        |
+| Alice    | HR        |
+| Bob      | IT        |
+| NULL     | Finance   |
++----------+-----------+
+4 rows in set (0.00 sec)
+
+
+select d.dept_name from Employees_3nov as e right join department_3nov as d on e.dept_id =d.dept_id where e.emp_name is null;
++-----------+
+| dept_name |
++-----------+
+| Finance   |
++-----------+
+1 row in set (0.00 sec
+
+
+Assignment 4: FULL OUTER JOIN Simulation
+Problem Statement:
+Since MySQL does not support FULL OUTER JOIN directly, use a combination of LEFT JOIN and RIGHT JOIN to display all employees and departments, ensuring that unmatched records are also included
+
+select e.emp_name,d.dept_name from Employees_3nov as e right join department_3nov as d on e.dept_id =d.dept_id
+-> union all
+->  select e.emp_name,d.dept_name from Employees_3nov as e left join department_3nov as d on e.dept_id =d.dept_id;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| David    | HR        |
+| Alice    | HR        |
+| Bob      | IT        |
+| NULL     | Finance   |
+| Alice    | HR        |
+| Bob      | IT        |
+| Charlie  | NULL      |
+| David    | HR        |
++----------+-----------+
+8 rows in set (0.00 sec)
+
+ select e.emp_name,d.dept_name from Employees_3nov as e right join department_3nov as d on e.dept_id =d.dept_id
+    -> union all
+    ->  select e.emp_name,d.dept_name from Employees_3nov as e left join department_3nov as d on e.dept_id =d.dept_id WHERE e.emp_id IS NULL;
++----------+-----------+
+| emp_name | dept_name |
++----------+-----------+
+| David    | HR        |
+| Alice    | HR        |
+| Bob      | IT        |
+| NULL     | Finance   |
++----------+-----------+
+4 rows in set (0.00 sec)
